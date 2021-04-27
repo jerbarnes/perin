@@ -431,7 +431,10 @@ def create_edges(sentence, attributes: bool, label_f=None, normalize=False):
             label = e["normal"].lower()
         else:
             source, target = e["source"], e["target"]
-            label = e["label"].lower()
+            try:
+                label = e["label"].lower()
+            except KeyError:
+                label = None
 
         if label_f is not None:
             label = label_f(label)

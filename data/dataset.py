@@ -19,6 +19,7 @@ from data.parser.from_mrp.drg_parser import DRGParser
 from data.parser.from_mrp.eds_parser import EDSParser
 from data.parser.from_mrp.ptg_parser import PTGParser
 from data.parser.from_mrp.ucca_parser import UCCAParser
+from data.parser.from_mrp.norec_parser import NorecParser
 from data.parser.from_mrp.evaluation_parser import EvaluationParser
 from data.parser.from_mrp.request_parser import RequestParser
 from data.field.edge_field import EdgeField
@@ -113,6 +114,7 @@ class Dataset:
             ("amr", "eng"): AMRParser, ("amr", "zho"): EDSParser,
             ("drg", "eng"): DRGParser, ("drg", "deu"): DRGParser,
             ("eds", "eng"): EDSParser,
+            ("norec", None): NorecParser,
             ("ptg", "eng"): PTGParser, ("ptg", "ces"): PTGParser,
             ("ucca", "eng"): UCCAParser, ("ucca", "deu"): UCCAParser,
         }[(framework, language)]

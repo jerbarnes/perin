@@ -46,6 +46,8 @@ class SharedDataset:
 
     def load_datasets(self, args, gpu, n_gpus):
         for (framework, language), dataset in self.child_datasets.items():
+            if language == "None":
+                language = None
             dataset.load_dataset(args, gpu, n_gpus, framework, language)
 
         self.share_chars()

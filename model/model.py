@@ -18,6 +18,7 @@ from model.head.amr_head import AMRHead
 from model.head.drg_head import DRGHead
 from model.head.eds_head import EDSHead
 from model.head.ptg_head import PTGHead
+from model.head.norec_head import NorecHead
 from model.head.ucca_head import UCCAHead
 from model.module.module_wrapper import ModuleWrapper
 from utility.utils import create_padding_mask
@@ -35,6 +36,7 @@ class Model(nn.Module):
             ("drg", "eng"): DRGHead, ("drg", "deu"): DRGHead,
             ("eds", "eng"): EDSHead,
             ("ptg", "eng"): PTGHead, ("ptg", "ces"): PTGHead,
+            ("norec", None): NorecHead, ("norec", "eng"): NorecHead,
             ("ucca", "eng"): UCCAHead, ("ucca", "deu"): UCCAHead,
         }
 

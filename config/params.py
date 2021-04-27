@@ -62,6 +62,7 @@ class Params:
             ("ptg", "ces"): f"{base_dir}/2020/cl/training/ptg.ces_train.mrp",
             ("ucca", "eng"): f"{base_dir}/2020/cf/training/ucca.mrp",
             ("ucca", "deu"): f"{base_dir}/2020/cl/training/ucca.deu_train.mrp",
+            ("norec", None): f"{base_dir}/norec_fine/train.mrp",
         }
 
         # path to the validation dataset
@@ -75,6 +76,7 @@ class Params:
             ("ptg", "ces"): f"{base_dir}/2020/cl/training/ptg.ces_val.mrp",
             ("ucca", "eng"): f"{base_dir}/2020/cf/validation/ucca.mrp",
             ("ucca", "deu"): f"{base_dir}/2020/cl/training/ucca.deu_val.mrp",
+            ("norec", None): f"{base_dir}/norec_fine/dev.mrp",
         }
 
         # path to the test dataset
@@ -88,6 +90,7 @@ class Params:
             ("ptg", "ces"): f"{base_dir}/2020/cl/evaluation/input.mrp",
             ("ucca", "eng"): f"{base_dir}/2020/cf/evaluation/input.mrp",
             ("ucca", "deu"): f"{base_dir}/2020/cl/evaluation/input.mrp",
+            ("norec", None): f"{base_dir}/norec_fine/test.mrp",
         }
 
         # path to udpipe companion data
@@ -101,6 +104,7 @@ class Params:
             ("ptg", "ces"): f"{base_dir}/2020/cl/companion/combined_ces.mrp",
             ("ucca", "eng"): f"{base_dir}/2020/cf/companion/combined_udpipe.mrp",
             ("ucca", "deu"): f"{base_dir}/2020/cl/companion/combined_deu.mrp",
+            ("norec", None): None,
         }
 
         return self
